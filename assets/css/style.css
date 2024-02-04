@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.toDoList {
+  background: #0f0c29;
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.toDoCard {
+  width: 400px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 50px 30px;
+}
+.toDoCard h1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.toDoCard h1 img {
+  width: 50px;
+}
+
+.addItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #aa0b0b15;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.addItem input {
+  padding: 12px 20px;
+  display: block;
+  width: 100%;
+  flex: 3;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.addItem button {
+  padding: 12px 20px;
+  flex: 1;
+  border: none;
+  background-color: orange;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.listItemWrapper li {
+  font-size: 18px;
+  padding: 10px 30px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.listItemWrapper li span {
+  background-color: rgb(160, 3, 3);
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.listItemWrapper li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: url(../Images/unchecked.png);
+  background-size: cover;
+
+  cursor: pointer;
+}
+
+.listItemWrapper li.checked {
+  text-decoration: line-through;
+}
+
+.listItemWrapper li.checked::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: url(../Images/checked.png);
+  background-size: cover;
+}
+
